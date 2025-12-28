@@ -253,26 +253,26 @@ export default function App() {
     }
 
     const paceStatus = Number(avgRecent) >= Number(perDay) 
-      ? "✅ Ahead of Schedule" 
-      : "⚠️ Behind Schedule";
+      ? "😄 Ahead of Schedule" 
+      : "💀 Behind Schedule";
 
     const trendText = diffFromYesterday === 0 
       ? "Same as yesterday" 
       : `${Math.abs(diffFromYesterday)} ${diffFromYesterday > 0 ? "more" : "less"} than yesterday`;
 
-    return `📊 ASTRITE PROGRESS REPORT - ${today}
+    return `ASTRITE PROGRESS REPORT - ${today}
 
-🔹 STATUS SUMMARY
+✨ SUMMARY
    • Total Balance: ${current.toLocaleString()}
    • Progress: ${percent.toFixed(2)}% (Goal: ${goal.toLocaleString()})
    • Remaining: ${needed.toLocaleString()} Astrites
 
-🔹 DAILY LOG
+✨ DAILY
    • Earned Today: ${todayVal.toLocaleString()}
    • Trend: ${trendText}
    • Notes: ${lastEntry?.note || "No notes."}
 
-🔹 PROJECTIONS
+✨ PROJECTIONS
    • Current Pace: ${avgRecent} / day
    • Required Rate: ${perDay} / day
    • Pace Status: ${paceStatus}
@@ -360,10 +360,10 @@ export default function App() {
           >
             <div>
               <h1 style={{ fontSize: "48px", margin: 0, textShadow: "0 2px 10px rgba(0,0,0,0.5)" }}>
-                Astrite Tracker
+                Astrite Tracker — Wuthering Waves
               </h1>
               <p style={{ margin: "8px 0 0 4px", opacity: 0.6, fontSize: "18px", fontStyle: "italic" }}>
-                Resolution: 3440x1440px Supported | Auto-saving Enabled
+                Hi there Rover, Journey Well! | Auto-saving Enabled
               </p>
             </div>
             <Button
@@ -389,7 +389,7 @@ export default function App() {
                   </div>
                   <div style={{ display: 'flex', alignItems: 'flex-end'}}>
                     <Button onClick={resetData} style={{ background: "#ef4444", color: "#fff", width: '100%' }}>
-                      🔄 Reset All Data
+                      Reset All Data?
                     </Button>
                   </div>
                 </div>
