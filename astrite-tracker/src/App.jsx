@@ -253,8 +253,8 @@ export default function App() {
     }
 
     const paceStatus = Number(avgRecent) >= Number(perDay) 
-      ? "😄 Ahead of Schedule" 
-      : "💀 Behind Schedule";
+      ? "You are en route to saving Solaris-3! 😄" 
+      : "You have to Journey more Rover..💀";
 
     const trendText = diffFromYesterday === 0 
       ? "Same as yesterday" 
@@ -267,7 +267,7 @@ export default function App() {
    • Progress: ${percent.toFixed(2)}% (Goal: ${goal.toLocaleString()})
    • Remaining: ${needed.toLocaleString()} Astrites
 
-✨ DAILY
+✨ DAILY ROVING REPORT
    • Earned Today: ${todayVal.toLocaleString()}
    • Trend: ${trendText}
    • Notes: ${lastEntry?.note || "No notes."}
